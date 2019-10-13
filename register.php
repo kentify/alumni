@@ -34,10 +34,14 @@ $row = mysqli_fetch_assoc($resultset);
 	$check = "SELECT id FROM users WHERE fname like '$fname' and mname like '$mname' and lname like '$lname' and alumni_id = $alumni_id;";
 	$checkr = mysqli_query($con,$check);
 	$fetch = mysqli_fetch_assoc($checkr);
-	if (!is_null($fetch)) {
+	if ($fetch > 0) {
+		if ($row['verify']==1) {
+			echo "error";
+		}else{
 		$sql = "INSERT INTO users(alumni_id,fname,mname,lname,dob,gender,contact,email,job,username, password,status,register,verify,picture,department,course,graduated,campus) " . "VALUES('$alumni_id','$fname','$mname','$lname','$dob','$gender','$contact','$email','$job','$username','$password','$status','$register','$verify','$picture','$department','$course','$graduated','$campus')";
 			mysqli_query($con, $sql) or die("database error:". mysqli_error($con)."qqq".$sql);
 			echo "registered";
+		 }
 		}else{
 			echo "unregistered";
 		}
