@@ -4,6 +4,10 @@ $("#register-form").validate({
    errorClass: 'errors',
           rules:
           {
+          alumni_id:{
+          required: true,
+          minlength: 4
+          },
           fname: {
           required: true,
           minlength: 1
@@ -65,6 +69,10 @@ $("#register-form").validate({
           },
           messages:
           {
+          alumni_id:{
+          required: "This field is required.",
+          minlength: "ID must atleast have 4 digits"
+          },
           fname:{
           required: "This field is required.",
           minlength: "Firstname must atleast have 1 character"
@@ -149,7 +157,6 @@ $("#register-form").validate({
             $("#btn-submit").addClass('btn-info'); 
             $("#btn-submit").html('<span class="fa fa-sign-in-alt"></span> Register');
             });
-            
             }else if(response=="registered"){
             $("#btn-submit").html('<i class="fas fa-spinner fa-spin"></i> &nbsp;<b align="center"> Signing up...</b>');
             $.toast({
@@ -162,6 +169,15 @@ $("#register-form").validate({
             textColor: 'white'
             });
             setTimeout(' window.location.replace("signin.php"); ',3000);
+            }
+            else if(response=="unregistered"){
+             $("#error").fadeIn(1000, function(){
+            $('#error').removeClass('hidden');
+            $("#error").html('<div class="alert alert-danger"><span class="fa fa-info-circle"></span> Name and ID is not in our database.</div>');
+            $("#btn-submit").addClass('btn-info'); 
+            $("#btn-submit").html('<span class="fa fa-sign-in-alt"></span> Register');
+            });
+            
             }else{
             $("#error").fadeIn(1000, function(){
             $('#error').removeClass('hidden');

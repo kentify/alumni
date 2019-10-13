@@ -40,7 +40,7 @@ input[type=number] {
   <div class="page-header header-filter" style="background-image: url('img/norsu-front.jpg'); background-size: cover; background-position: fixed; height:100%;">
     <div class="container" style="padding-top: 100px;">
       <div class="row">
-        <div class="col-md-8 col-md-offset-2 col-sm-12">
+        <div class="col-md-12 col-sm-12">
          <div class="card card-signup" style="margin-top: -20px;">
             <form method="post" class="form-signin" id="register-form" style="padding:20px 30px 0px 20px;">
               <div class="header text-center" style="background-color: transparent; box-shadow: none; margin-top:-110px; padding-bottom: 0;">
@@ -49,18 +49,31 @@ input[type=number] {
                     <p class="description text-center">Register an account</p>
                     <div style="font-size: 14px; width:100%; margin:0 auto;" align="center" id="error"></div>
                     <div class="row clearfix">
-                        <div class="col-md-4 col-sm-12">  
+                      <div class="col-md-3 col-sm-12">  
                              <div class="input-group">
                              <span class="input-group-addon">
                             <i class="material-icons">person</i>
                         </span>
+                      
+                            <div class="form-group label-floating">
+                              <label class="control-label">Alumni ID:</label>
+                                 <input required="required" autocomplete="off" autofocus=""  type="text" class="form-control" name="alumni_id" id="alumni_id">
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12">  
+                             <div class="input-group">
+                             <span class="input-group-addon">
+                            <i class="material-icons">person</i>
+                        </span>
+
                             <div class="form-group label-floating">
                               <label class="control-label">Firstname</label>
                                  <input required="required" autocomplete="off" autofocus=""  type="text" class="form-control" name="fname" id="fname">
                                  </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">  
+                        <div class="col-md-3 col-sm-12">  
                              <div class="input-group">
                              <span class="input-group-addon">
                             <i class="material-icons">person_outline</i>
@@ -71,7 +84,7 @@ input[type=number] {
                                  </div>
                             </div>
                         </div>    
-                        <div class="col-md-4 col-sm-12"> 
+                        <div class="col-md-3 col-sm-12"> 
                                     <div class="input-group">
                                         <span class="input-group-addon">
                             <i class="material-icons">person_add</i>
