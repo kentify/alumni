@@ -173,7 +173,7 @@ $("#register-form").validate({
             else if(response=="unregistered"){
              $("#error").fadeIn(1000, function(){
             $('#error').removeClass('hidden');
-            $("#error").html('<div class="alert alert-danger"><span class="fa fa-info-circle"></span> Name and ID is not in our database.</div>');
+            $("#error").html('<div class="alert alert-danger"><span class="fa fa-info-circle"></span> Name/ID is already registered or invalid.</div>');
             $("#btn-submit").addClass('btn-info'); 
             $("#btn-submit").html('<span class="fa fa-sign-in-alt"></span> Register');
             });

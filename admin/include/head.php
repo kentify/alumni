@@ -249,16 +249,6 @@ if (!isset($_SESSION['admin'])) {
   <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel sidebar-form">
-        <div class="pull-left image">
-          <img src="img/default-avatar.png" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
@@ -286,13 +276,13 @@ if (!isset($_SESSION['admin'])) {
         </li>
         <li class="treeview">
           <a href="#">
-           <i class="fa fa-building"></i> <span>Couse & Department</span>
+           <i class="fa fa-building"></i> <span>Lists</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="courses.php"><i class="fa fa-book"></i> Couse</a></li>
+            <li><a href="courses.php"><i class="fa fa-book"></i> Course</a></li>
             <li><a href="department.php"><i class="fa fa-building-o"></i> Department </a></li>
             <li><a href="campus.php"><i class="fa fa-building-o"></i> School/Campus </a></li>
           </ul>

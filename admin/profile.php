@@ -62,7 +62,7 @@
                       <strong><?php echo $row['fname'] ?>'s Information</strong>
                       <div class="form-group ">
                       <strong>Alumni ID </strong>
-                      : <?php echo $row['id'] ?></div> 
+                      : <?php echo $row['alumni_id'] ?></div> 
                     </div>
                     <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group ">
@@ -135,10 +135,8 @@
                     : <?php 
                       if ($row['verify']==0) {
                         echo '<span class="label label-warning">Pending</span>';
-                      }elseif($row['verify']==1){
-                        echo '<span class="label label-success">Approved</span>';
-                      }else{
-                        echo '<span class="label label-danger">Denied</span>';
+                     }else{
+                        echo '<span class="label label-success" style="padding:5px;">Registered</span>';
                       }
                       ?> 
                       </div>

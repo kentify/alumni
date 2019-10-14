@@ -8,9 +8,9 @@ $fname = $_POST['fname'];
 $mname = $_POST['mname'];
 $lname =  $_POST['lname'];
 $status = "Offline";
-$verify = "1";
 $graduated = $_POST['graduated'];
 $dob = $_POST['dob'];
+$verify = "0";
 $campus = $_POST['campus'];
 $department = $_POST['department'];
 $course = $_POST['course'];
@@ -26,25 +26,21 @@ $rows = mysqli_fetch_assoc($result);
 $sql = "SELECT * FROM users WHERE email='$email'";
 $resultset = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($resultset);
-        if($username == $rows['username']){
-		echo "1";
-		}elseif($email == $row['email']){
-		echo "2";
-		}else{
-	$check = "SELECT id FROM users WHERE fname like '$fname' and mname like '$mname' and lname like '$lname' and alumni_id = $alumni_id;";
-	$checkr = mysqli_query($con,$check);
-	$fetch = mysqli_fetch_assoc($checkr);
-	if ($fetch > 0) {
-		if ($row['verify']==1) {
-			echo "error";
-		}else{
-		$sql = "INSERT INTO users(alumni_id,fname,mname,lname,dob,gender,contact,email,job,username, password,status,register,verify,picture,department,course,graduated,campus) " . "VALUES('$alumni_id','$fname','$mname','$lname','$dob','$gender','$contact','$email','$job','$username','$password','$status','$register','$verify','$picture','$department','$course','$graduated','$campus')";
+if($username == $rows['username']){
+echo "1";
+}elseif($email == $row['email']){
+echo "2";
+}else {
+$query = mysqli_query($con,"SELECT id FROM users WHERE fname like '$fname' and mname like '$mname' and lname like '$lname' and verify like '$verify' and alumni_id = '$alumni_id'");
+$get = mysqli_fetch_assoc($query);
+$id = $get['id'];
+if ($get > 0) {
+$sql = "UPDATE  users  SET  dob ='$dob', gender ='$gender', contact ='$contact', email ='$email', username ='$username', password ='$password', status ='$status', verify ='1', picture ='$picture', department ='$department', course ='$course', graduated ='$graduated', campus ='$campus' WHERE id = '$id'";
 			mysqli_query($con, $sql) or die("database error:". mysqli_error($con)."qqq".$sql);
 			echo "registered";
-		 }
-		}else{
-			echo "unregistered";
-		}
-	  }
-	}
+}else{
+	echo "unregistered";
+}
+}
+}
 ?>

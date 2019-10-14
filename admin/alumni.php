@@ -36,7 +36,7 @@
                   <th>Email</th>
                   <th>Campus</th>
                   <th>Contact Number</th>
-                  <th width="80px">Action</th>
+                  <th width="5px">Action</th>
                 
                 </tr>
                 </thead>
@@ -57,22 +57,11 @@
                                         <td>'.$data['campus'].'</td>
                                         <td>'.$data['contact'].'</td>
                                         ';
-                                    if ($data['verify']==0) {
-                                     echo '<td>
-                                      <a href="profile.php?view='.$data['stuid'].'&id='.$data['id'].'" style="margin: 0 auto; padding:10px;" class="btn btn-info btn-sm"><i class="fa fa-info-circle"aria-hidden="true"></i></a>
-                                      <a style="margin: 0 auto; padding:10px;" class="btn btn-success btn-sm"><i class="fa fa-check " aria-hidden="true"></i></a>
-                                      <a style="margin: 0 auto; padding:10px;" class="btn btn-danger btn-sm"><i class="fa fa-times" aria-hidden="true"></i></a>
-                                        </td>
+                                    
+                                     echo '<td align="center">
+                                      <a href="profile.php?view='.$data['stuid'].'&id='.$data['id'].'" style="background-color:#00c0ef; margin: 0 auto; padding:10px;" class="btn btn-info btn-sm"><i style="color:white;" class="fa fa-search"aria-hidden="true"></i></a>
                                     ';
-                                    }else{
-                                      echo '<td>
-                                      <a href="profile.php?view='.$data['stuid'].'&id='.$data['id'].'" style="margin: 0 auto; padding:10px;" class="btn btn-info btn-sm"><i class="fa fa-info-circle"aria-hidden="true"></i></a>
-                                      <a style="margin: 0 auto; padding:10px;" disabled  class="btn btn-success btn-sm"><i class="fa fa-check " aria-hidden="true"></i></a>
-                                      <a style="margin: 0 auto; padding:10px;" disabled  class="btn btn-danger btn-sm"><i class="fa fa-times" aria-hidden="true"></i></a>
-                                        </td>
-                                      </td>';
-
-                                    }
+        
 
                                       
                                     echo '</tr>';

@@ -243,11 +243,12 @@ input[type=number] {
                     </div>
                   </div>    
                  </div>
-                 <br>
-                   <p align="left" style="margin-left: 50px;">by clicking register, you agree to the <a href="">terms and conditions.</a></p>
+                 
+                  <br>
                 <div style="margin-left: 40px; margin-top: 0;" class="footer text-center">
                 <button align="center" style="margin: 0 auto;" name="btn-save" id="btn-submit" class="btn btn-info"><i class="fa fa-sign-in-alt"></i><span style="font-size: 13px;"> Register</span></button>
-                <br>
+              
+                 <p align="center" style="padding-top: 50px;">by clicking register, you agree to the <a href="">terms and conditions.</a></p>
               </div>
               <div style="width: 65%; margin: 0 auto; padding-top: 20px;" class="footer text-center">
               <p>Already have account? <a href="signin.php">Login now!</a></p>

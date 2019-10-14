@@ -13,8 +13,7 @@
 <script src="assets/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
-<!-- Sparkline -->
-<script src="assets/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+
 <!-- jvectormap  -->
 <!-- DataTables -->
 <script src="assets/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -22,8 +21,6 @@
 
 <!-- SlimScroll -->
 <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- ChartJS -->
-<script src="assets/chart.js/Chart.js"></script>
 <script type="text/javascript">
   //paste this code under the head tag or in a separate js file.
   // Wait for window load

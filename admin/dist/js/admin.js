@@ -46,7 +46,7 @@
             icon: 'success'
           });
          
-          setTimeout(' window.location.replace("dashboard.php"); ',3000);
+          setTimeout(' window.location.replace("alumni.php"); ',3000);
         } else {                  
           $("#error").fadeIn(1000, function(){
           $('#error').removeClass('hidden');            
