@@ -13,13 +13,13 @@ if (!isset($_SESSION['admin'])) {
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="dist/css/bootstrap.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="dist/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="dist/Ionicons/css/ionicons.min.css">
   <!-- DataTables -->
-  <link rel="stylesheet" href="assets/datatables.net-bs/css/dataTables.bootstrap.min.css">
+  <link rel="stylesheet" href="dist/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
   <!-- Material Design -->
@@ -31,44 +31,10 @@ if (!isset($_SESSION['admin'])) {
   <link rel="stylesheet" href="dist/css/skins/all-md-skins.css">
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        <link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
 <style>
-    .main-header .navbar .nav>li>a>.label
-    {
-     top: 12px !important;
-     right:5px !important;
-    }
-    .menu::-webkit-scrollbar 
-    {
-     width: 5px;
-    }
-    .menu::-webkit-scrollbar-track 
-    {
-     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-     border-radius:50px;
-    }
-    .menu::-webkit-scrollbar-thumb
-    {
-     background-color: #00c0ef;
-     border-radius:10px;
-    }
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-        position: fixed;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 9999999;
-        background: url('../img/loading.gif') center no-repeat #fff;
-    }
-    .navbar .navbar-nav>li>a{
-        padding-top: 18px !important;
-    }
-    .main-sidebar .user-panel{
-      padding: 10px !important;
-    }
+
 </style>
 <body class="hold-transition skin-blue sidebar-mini">
   <div class="se-pre-con"></div>

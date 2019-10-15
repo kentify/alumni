@@ -29,6 +29,7 @@
                 <thead>
                 <tr align="center">
                   <th>#</th>
+                  <th>Alumni ID</th>
                   <th>Name</th>
                   <th>Course</th>
                   <th>Department</th>
@@ -49,6 +50,7 @@
                                 echo '
                                     <tr>
                                         <td>'.$data['id'].'</td>
+                                        <td>'.$data['alumni_id'].'</td>
                                         <td>'.$data['fname']." ".$mid.". ".$data['lname'].'</td>
                                         <td>'.$data['course'].'</td>
                                         <td>'.$data['department'].'</td>

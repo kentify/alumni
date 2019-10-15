@@ -6,7 +6,7 @@ if (!empty($_SESSION['id'])) {
     session_unset();
     header("Location: index.php");
 	$uid = $_SESSION['id'];
-    $q = "UPDATE users SET logout = NOW() WHERE id = '$uid'" ;
+    $q = "UPDATE users SET logout = NOW(), status = 'Offline' WHERE id = '$uid'" ;
     $r = mysqli_query($con,$q);
     exit();
 }else {

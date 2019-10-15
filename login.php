@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include_once("db.php");
 if(isset($_POST['login_button'])) {
 	$username = $_POST['username'];
@@ -16,7 +17,7 @@ if(isset($_POST['login_button'])) {
 		$_SESSION['verify']= $row['verify'];
 		$_SESSION['picture'] = $row['picture'];
 		$uid = $row['id'];
-		$q = "UPDATE users SET status = 'Online', login = NOW() WHERE id = '$uid'" ;
+		$q = "UPDATE users SET status = 'Online', login = NOW(), logout = NULL WHERE id = '$uid'";
         $r = mysqli_query($con,$q);	
 		if(!empty($_POST["remember"])) {
 				setcookie ("member_login",$_POST["username"],time()+ (10 * 365 * 24 * 60 * 60));

@@ -144,9 +144,19 @@ input[type=number] {
                         <div class="form-group label-floating is-focused">
                         <label class="control-label">Course</label>
                           <select required name="course" title="course" class="form-control">
-                                        <option selected disabled value="">Choose Course</option>
-                                        <option value="BSINT">BS Information Technology</option>
-                                        <option value="BSCS">BS Computer Science</option>
+                              <option selected disabled value="">Choose Course</option>
+                                       <?php
+                                        include 'db.php';
+                                        $query = "SELECT * FROM course";
+                                        $results = mysqli_query($con,$query);
+
+                                        while ($rows = mysqli_fetch_assoc($results)){ 
+                                        ?>
+                                        <option value="<?php echo $rows['description'];?>"><?php echo $rows['description'];?></option>
+
+                                        <?php
+                                        } 
+                                        ?>
                          </select>
                         </div>
                     </div>
@@ -160,8 +170,18 @@ input[type=number] {
                         <label class="control-label">Department</label>
                           <select required name="department" title="department" class="form-control">
                                         <option selected disabled value="">Choose Department</option>
-                                        <option value="BSINT">BS Information Technology</option>
-                                        <option value="BSCS">BS Computer Science</option>
+                                        <?php
+                                        include 'db.php';
+                                        $query = "SELECT * FROM department";
+                                        $results = mysqli_query($con,$query);
+
+                                        while ($rows = mysqli_fetch_assoc($results)){ 
+                                        ?>
+                                        <option value="<?php echo $rows['department'];?>"><?php echo $rows['description'];?></option>
+
+                                        <?php
+                                        } 
+                                        ?>
                          </select>
                         </div>
                     </div>
@@ -177,8 +197,18 @@ input[type=number] {
                         <label class="control-label">School/Campus</label>
                                  <select required name="campus" title="campus" class="form-control">
                                         <option selected disabled value="">Choose School/Campus</option>
-                                        <option value="BSINT">BS Information Technology</option>
-                                        <option value="BSCS">BS Computer Science</option>
+                                       <?php
+                                        include 'db.php';
+                                        $query = "SELECT * FROM campus";
+                                        $results = mysqli_query($con,$query);
+
+                                        while ($rows = mysqli_fetch_assoc($results)){ 
+                                        ?>
+                                        <option value="<?php echo $rows['name'];?>"><?php echo $rows['description'];?></option>
+
+                                        <?php
+                                        } 
+                                        ?>
                          </select>
                                  </div>
                             </div>
@@ -239,6 +269,20 @@ input[type=number] {
                         <div class="form-group label-floating">
                         <label class="control-label">Confirm Password</label>
                             <input type="password" autocomplete="off" required="required" class="form-control" name="cpassword" id="cpassword">
+                            <input type="hidden" name="country" value='<?php
+                              function ip_details($ip)
+                              {
+                              $json = file_get_contents("http://ipinfo.io/{$ip}");
+                              $details = json_decode($json);
+                              return $details;
+                              }
+
+                              $details = ip_details(''); 
+
+                              
+                              echo $details->city; 
+                           
+                              ?>'>
                         </div>
                     </div>
                   </div>    

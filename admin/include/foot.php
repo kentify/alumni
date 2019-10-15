@@ -2,7 +2,7 @@
 <script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
 <!-- Bootstrap 3.3.7 -->
-<script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="dist/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Material Design -->
 <script src="dist/js/material.min.js"></script>
 <script src="dist/js/ripples.min.js"></script>
@@ -10,17 +10,17 @@
     $.material.init();
 </script>
 <!-- FastClick -->
-<script src="assets/fastclick/lib/fastclick.js"></script>
+<script src="dist/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 
 <!-- jvectormap  -->
 <!-- DataTables -->
-<script src="assets/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="assets/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="dist/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="dist/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 
 <!-- SlimScroll -->
-<script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="dist/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script type="text/javascript">
   //paste this code under the head tag or in a separate js file.
   // Wait for window load

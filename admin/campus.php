@@ -48,8 +48,8 @@
                                         ';
                                     
                                      echo '<td align="center">
-                                      <a style="margin: 0 auto; padding:10px;" class="btn btn-success btn-sm"><i class="fa fa-check " aria-hidden="true"></i></a>
-                                      <a style="margin: 0 auto; padding:10px;" class="btn btn-danger btn-sm"><i class="fa fa-times" aria-hidden="true"></i></a>
+                                       <a style="margin: 0 auto; padding:10px;" class="btn btn-success"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                      <a style="margin: 0 auto; padding:10px;" class="btn btn-danger"><i class="fa fa-trash-o  " aria-hidden="true"></i></a>
                                         </td>
                                     ';
 

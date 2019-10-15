@@ -30,7 +30,7 @@
                       $mid = mb_substr($row['mname'], 0, 1);
                 
                         ?>
-              <img class="profile-user-img img-responsive img-circle" src="img/<?php echo $row['picture'] ?>" alt="User profile picture">
+              <img class="profile-user-img img-responsive img-circle" src="../img/<?php echo $row['picture'] ?>" alt="User profile picture">
                 <br>
               <p style="width: 100%; margin: 0 auto; text-align:center" class=""><b><?php echo $row['fname'] ?>&nbsp;<?php echo $mid ?>.&nbsp;<?php echo $row['lname'] ?></b></p>
 
@@ -128,7 +128,26 @@
                     : <?php echo $row['graduated'] ?> 
                       </div>
                     </div>
-
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                      <div class="form-group">
+                        <strong>Age </strong>
+                    : <?php  
+                     $id = $_GET['id'];
+                      $dob= $row['dob'];
+                      $age = (date('Y') - date('Y',strtotime($dob)));
+                      echo $age; 
+                      if(isset($_REQUEST['id'])) {
+                        $sql = mysqli_query($con,"UPDATE  users  SET  age ='$age' WHERE id = '$id' ");
+                      }
+                      ?> 
+                      </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                      <div class="form-group">
+                        <strong>Country </strong>
+                    : <?php echo $row['country'] ?> 
+                      </div>
+                    </div>
                    <div class="col-xs-12 col-sm-4 col-md-4">
                       <div class="form-group">
                         <strong>Status</strong>

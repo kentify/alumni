@@ -134,10 +134,7 @@ session_start();
 	                                    <li>
 	                                     <a href="#pablo">&nbsp;Settings</a>
 	                                    </li>
-	                                    <li class="divider"></li>
-	                                    <li  class="dropdown-header">
-	                                       <a style="padding 5px;" align="center" href="">See all</a>
-	                                    </li>
+	                                  
 	                                </ul>
 	                            </li>';
 						echo '<li class="dropdown">
